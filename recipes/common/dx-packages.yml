@@ -1,6 +1,6 @@
 type: rpm-ostree
 remove:
-  # - zfs-fuse
+  - zfs-fuse
   - libvirt-daemon-driver-storage-zfs 
   - libvirt-daemon-kvm
   - libvirt-daemon-driver-storage
