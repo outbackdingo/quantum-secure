@@ -1,0 +1,10 @@
+type: script
+scripts:
+  - authselect.sh
+  - setfilepermissions.sh
+  - disablesealertpopups.sh
+  - httpsmirrors.sh
+  - createmissingdirectories.sh
+  - removesuid.sh
+  - disablegeoclue.sh
+  - addjustconfig.sh
