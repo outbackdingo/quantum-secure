@@ -2,7 +2,7 @@ name: wayblue-hyprland-main-hardened
 
 description: "wayblue hyprland main with some hardening applied"
 
-base-image: ghcr.io/wayblueorg/hyprland
+base-image: ghcr.io/outbackdingo/hyprland
 
 image-version: 40
 
