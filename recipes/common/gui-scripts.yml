@@ -1,5 +1,4 @@
 type: script
 scripts:
   - disablecups.sh
-  - disablesshd.sh
   - justfilehardening.sh
