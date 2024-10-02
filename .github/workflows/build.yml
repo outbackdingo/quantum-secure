@@ -40,7 +40,7 @@ jobs:
           # - general/recipe-wayblue-wayfire-main.yml
           # - general/recipe-wayblue-wayfire-nvidia.yml
           # - general/recipe-wayblue-hyprland-main.yml
-          - general/recipe-wayblue-hyprland-nvidia.yml
+          # - general/recipe-wayblue-hyprland-nvidia.yml
           # - general/recipe-wayblue-river-main.yml
           # - general/recipe-wayblue-river-nvidia.yml
           # - general/recipe-wayblue-sway-main.yml
