@@ -159,7 +159,7 @@ jobs:
           pubkey: 'https://raw.githubusercontent.com/secureblue/coreos/main/cosign.pub'
 
       - name: Build secureblue
-        uses: blue-build/github-action@v1.6.1
+        uses: blue-build/github-action@v1.6.2
         with:          
           cli_version: v0.8.14
           recipe: ${{ matrix.recipe }}
