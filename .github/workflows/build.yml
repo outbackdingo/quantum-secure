@@ -87,7 +87,7 @@ jobs:
           # - general/recipe-sericea-nvidia-userns.yml
           # - general/recipe-wayblue-wayfire-main-userns.yml
           # - general/recipe-wayblue-wayfire-nvidia-userns.yml
-          # - general/recipe-wayblue-hyprland-main-userns.yml
+          - general/recipe-wayblue-hyprland-main-userns.yml
           - general/recipe-wayblue-hyprland-nvidia-userns.yml
           # - general/recipe-wayblue-river-main-userns.yml
           # - general/recipe-wayblue-river-nvidia-userns.yml
