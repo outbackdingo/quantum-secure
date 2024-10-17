@@ -6,4 +6,4 @@ install:
   # needed for some scripts
   - patch
   # missing upstream
-  - rar
+  # - rar
