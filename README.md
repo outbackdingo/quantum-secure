@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">secureblue</h1>
+<h1 align="center">quantum-secure</h1>
 
 
 [![secureblue](https://github.com/secureblue/secureblue/actions/workflows/build.yml/badge.svg)](https://github.com/secureblue/secureblue/actions/workflows/build.yml)
@@ -15,7 +15,7 @@ This repo uses [BlueBuild](https://blue-build.org/) to generate hardened operati
 
 # Scope
 
-secureblue applies hardening with the following goals in mind:
+quantum-secure applies hardening with the following goals in mind:
 
 - Increase defenses against the exploitation of both known and unknown vulnerabilities.
 - Avoid sacrificing usability for most use cases where possible
