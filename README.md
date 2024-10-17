@@ -107,79 +107,23 @@ While it's recommended to use a Fedora Atomic iso to install and then rebase tha
 # Images <sup>[userns?](USERNS.md)</sup>
 ## Desktop
 ### Recommended <sup>[why?](RECOMMENDED.md)</sup>
-- `silverblue-main-hardened`
-- `silverblue-nvidia-hardened`
-- `silverblue-main-userns-hardened`
-- `silverblue-nvidia-userns-hardened`
+
 ### Stable
-- `kinoite-main-hardened`
-- `kinoite-nvidia-hardened`
-- `aurora-main-hardened`
-- `aurora-nvidia-hardened`
-- `sericea-main-hardened`
-- `sericea-nvidia-hardened`
-- `kinoite-main-userns-hardened`
-- `kinoite-nvidia-userns-hardened`
-- `aurora-main-userns-hardened`
-- `aurora-nvidia-userns-hardened`
-- `aurora-dx-main-userns-hardened`
-- `aurora-dx-nvidia-userns-hardened`
-- `sericea-main-userns-hardened`
-- `sericea-nvidia-userns-hardened`
-- `bluefin-main-hardened`
-- `bluefin-nvidia-hardened`
-- `bluefin-dx-main-userns-hardened`
-- `bluefin-dx-nvidia-userns-hardened`
-- `bluefin-main-userns-hardened`
-- `bluefin-nvidia-userns-hardened`
+
 ### Beta
-- `wayblue-wayfire-main-hardened`
-- `wayblue-wayfire-nvidia-hardened`
+
 - `wayblue-hyprland-main-hardened`
 - `wayblue-hyprland-nvidia-hardened`
-- `wayblue-river-main-hardened`
-- `wayblue-river-nvidia-hardened`
-- `wayblue-sway-main-hardened`
-- `wayblue-sway-nvidia-hardened`
-- `wayblue-wayfire-main-userns-hardened`
-- `wayblue-wayfire-nvidia-userns-hardened`
 - `wayblue-hyprland-main-userns-hardened`
 - `wayblue-hyprland-nvidia-userns-hardened`
-- `wayblue-river-main-userns-hardened`
-- `wayblue-river-nvidia-userns-hardened`
-- `wayblue-sway-main-userns-hardened`
-- `wayblue-sway-nvidia-userns-hardened`
+
 ### Experimental
-- `cinnamon-main-hardened`
-- `cinnamon-nvidia-hardened`
-- `cinnamon-main-userns-hardened`
-- `cinnamon-nvidia-userns-hardened`
+
 - `cosmic-main-hardened`
 - `cosmic-nvidia-hardened`
 - `cosmic-main-userns-hardened`
 - `cosmic-nvidia-userns-hardened`
-### Asus <sup>[source](https://github.com/ublue-os/hwe/tree/main/asus)</sup>
-- `silverblue-asus-hardened`
-- `silverblue-asus-nvidia-hardened`
-- `silverblue-asus-userns-hardened`
-- `silverblue-asus-nvidia-userns-hardened`
-- `aurora-asus-hardened`
-- `aurora-asus-nvidia-hardened`
-- `kinoite-asus-hardened`
-- `kinoite-asus-nvidia-hardened`
-- `aurora-asus-userns-hardened`
-- `aurora-asus-nvidia-userns-hardened`
-- `aurora-dx-asus-userns-hardened`
-- `aurora-dx-asus-nvidia-userns-hardened`
-- `kinoite-asus-userns-hardened`
-- `kinoite-asus-nvidia-userns-hardened`
-### Surface <sup>[source](https://github.com/ublue-os/hwe/tree/main/surface)</sup>
-- `aurora-surface-hardened`
-- `aurora-surface-nvidia-hardened`
-- `aurora-surface-userns-hardened`
-- `aurora-surface-nvidia-userns-hardened`
-- `aurora-dx-surface-userns-hardened`
-- `aurora-dx-surface-nvidia-userns-hardened`
+
 ## Server
 - `securecore-main-hardened`
 - `securecore-nvidia-hardened`
