@@ -2,7 +2,7 @@ name: cosmic-nvidia-userns-hardened
 
 description: "Cosmic nvidia with some hardening applied"
 
-base-image: ghcr.io/ublue-os/cosmic-nvidia
+base-image: ghcr.io/outbackdingo/cosmic-nvidia
 
 image-version: 40
 
