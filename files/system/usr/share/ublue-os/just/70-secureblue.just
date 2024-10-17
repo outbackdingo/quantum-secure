@@ -406,11 +406,26 @@ audit-secureblue:
         print_status "$SYSCTL_TEST_STRING" "$STATUS_FAILURE"
     fi
 
-    SYSCTL_TEST_STRING="Ensuring no modprobe overrides"
-    if diff /usr/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.conf > /dev/null; then
-        print_status "$SYSCTL_TEST_STRING" "$STATUS_SUCCESS"
+    MODPROBE_TEST_STRING="Ensuring no modprobe overrides"
+    readarray -t unwanted_modules < <(comm -12 <(lsmod | cut -f 1 -d " " | sort) <(cat /usr/etc/modprobe.d/blacklist.conf | grep -E '^(blacklist)|(install)' | cut -f 2 -d " " | sort))
+    if [[ "${#unwanted_modules[@]}" == 0 ]] && diff /usr/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.conf > /dev/null; then
+        print_status "$MODPROBE_TEST_STRING" "$STATUS_SUCCESS"
     else
-        print_status "$SYSCTL_TEST_STRING" "$STATUS_FAILURE"
+        print_status "$MODPROBE_TEST_STRING" "$STATUS_FAILURE"
+        for module in "${unwanted_modules[@]}"; do
+            echo "> $module is in blacklist.conf but it is loaded"
+            if [[ "$module" == "bluetooth" ]]; then
+                bluetooth_loaded=true
+            fi
+        done
+    fi
+
+    PTRACE_TEST_STRING="Ensuring ptrace is forbidden"
+    if [[ "$(cat /proc/sys/kernel/yama/ptrace_scope)" == 3 ]]; then
+        print_status "$PTRACE_TEST_STRING" "$STATUS_SUCCESS"
+    else
+        print_status "$PTRACE_TEST_STRING" "$STATUS_FAILURE"
+        ptrace_allowed=true
     fi
 
     AUTHSELECT_TEST_STRING="Ensuring no authselect overrides"
@@ -572,9 +587,25 @@ audit-secureblue:
                 status="$STATUS_FAILURE"
                 warnings+=("> $f has x11 access!")
             fi
+            if hasPermission "$permissions" "sockets" "session-bus"; then
+                [[ "$status" != "$STATUS_FAILURE" ]] && status="$STATUS_WARNING"
+                warnings+=("> $f has access to the D-Bus session bus!")
+            fi
+            if hasPermission "$permissions" "sockets" "system-bus"; then
+                [[ "$status" != "$STATUS_FAILURE" ]] && status="$STATUS_WARNING"
+                warnings+=("> $f has access to the D-Bus system bus!")
+            fi
             if ! hasPermission "$permissions" "LD_PRELOAD" .*"/libhardened_malloc.so"; then
                 status="$STATUS_FAILURE"
                 warnings+=("> $f is not using hardened_malloc!")
+            fi
+            if [[ "$bluetooth_loaded" == "true" ]] && hasPermission "$permissions" "features" "bluetooth"; then
+                status="$STATUS_FAILURE"
+                warnings+=("> $f has bluetooth access!")
+            fi
+            if [[ "$ptrace_allowed" == "true" ]] && hasPermission "$permissions" "features" "devel"; then
+                status="$STATUS_FAILURE"
+                warnings+=("> $f has ptrace access!")
             fi
             flatpak_test_string="Auditing $f"
             print_status "$flatpak_test_string" "$status"

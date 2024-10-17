@@ -2,7 +2,7 @@ name: wayblue-hyprland-main-userns-hardened
 
 description: "wayblue hyprland main with some hardening applied"
 
-base-image: ghcr.io/outbackdingo/hyprland
+base-image: ghcr.io/wayblueorg/hyprland
 
 image-version: 40
 
@@ -10,7 +10,7 @@ modules:
   - from-file: common/initialization-scripts.yml
   - from-file: common/gui-packages.yml
   - from-file: common/common-packages.yml 
-  - from-file: common/non-cosmic-scripts.yml
+  - from-file: common/non-rechunked-scripts.yml
   - from-file: common/remove-firefox.yml
   - from-file: common/gui-scripts.yml
   - from-file: common/common-files.yml

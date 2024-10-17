@@ -5,23 +5,21 @@ repos:
 install:
   - headsetcontrol
   - hardened-chromium
+  - hardened-chromium-subresource-filter
   - mediainfo
   - bubblejail
   - usbguard-notifier
   - usbguard
   - setroubleshoot
   - setools
-  
 remove:
-  # - fuse
+  - fuse
   - fedora-chromium-config
   - fedora-flathub-remote
   - open-vm-tools
   - open-vm-tools-desktop
   - virtualbox-guest-additions
   - passim
-
-
 
 
 
