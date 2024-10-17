@@ -93,7 +93,7 @@ jobs:
           # - general/recipe-wayblue-river-nvidia-userns.yml
           # - general/recipe-wayblue-sway-main-userns.yml
           # - general/recipe-wayblue-sway-nvidia-userns.yml
-          # - general/recipe-cosmic-main-userns.yml
+          - general/recipe-cosmic-main-userns.yml
           - general/recipe-cosmic-nvidia-userns.yml
           # asus
           # - asus/recipe-silverblue-asus-userns.yml
